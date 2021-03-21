@@ -28,8 +28,8 @@ def login_in():
     #   教室校园网
     if choose == 2:
         #   账号密码
-        my_username = '1928424157'
-        my_password = '308533'
+        my_username = ''
+        my_password = ''
 
         #   找到账号密码对应的 html 元素
         input_username = driver.find_element(By.XPATH,'//*[@id="useridtemp"]')
@@ -65,8 +65,8 @@ def login_in():
 
     if choose == 1:
         #   全自动化脚本
-        my_username = '1928424157'
-        my_password = 'FMY15890868222'
+        my_username = ''
+        my_password = ''
         # print('代码已经运行，请稍后!')
         input_username = driver.find_element(By.XPATH,'//input[@id="userName"]')
         input_password = driver.find_element(By.XPATH,'//input[@id="passwd"]')
