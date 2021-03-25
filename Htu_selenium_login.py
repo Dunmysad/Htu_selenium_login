@@ -6,12 +6,12 @@ import time
 
 
 #   宿舍外校园网账号密码
-my_username_outdoor = '1928424157'
-my_password_outdoor = '308533'
+my_username_outdoor = ''
+my_password_outdoor = ''
 
 #   宿舍内校园网账号密码
-my_username_indoor = '1928424157'
-my_password_indoor = 'FMY15890868222'
+my_username_indoor = ''
+my_password_indoor = ''
 
 #   代码运行提示
 print('代码已经运行，请稍后!')
