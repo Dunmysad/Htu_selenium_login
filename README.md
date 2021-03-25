@@ -17,4 +17,4 @@ Mac：打开 /usr/local/bin 文件夹，将解压的文件放入
 
 ## 添加账号密码字段
 
-在代码中找到`my_username`、`my_password`字段进行填写（共有两处）
+在代码中找到`my_username_outdoor`、`my_password_outdoor`、`my_username_indoor`、`my_password_indoor`字段进行填写
