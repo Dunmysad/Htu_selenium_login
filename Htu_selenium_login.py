@@ -4,7 +4,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-
 #   宿舍外校园网账号密码
 my_username_outdoor = ''
 my_password_outdoor = ''
