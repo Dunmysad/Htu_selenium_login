@@ -11,9 +11,9 @@ Windows：把下载好的文件解压到脚本保存位置
 
 Mac：打开 /usr/local/bin 文件夹，将解压的文件放入
 
-## 安装selenium
+## 安装selenium、requests
 
-在终端运行 `pip3 install selenium` 来安装`selenium`库
+在终端运行 `pip install selenium requests` 来安装
 
 ## 添加账号密码字段
 
