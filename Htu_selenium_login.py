@@ -6,14 +6,15 @@ import time
 import requests
 import sys
 
-
-#   宿舍外校园网账号密码\
+#   宿舍外校园网账号密码
 my_username_outdoor = ''
 my_password_outdoor = ''
 
 #   宿舍内校园网账号密码
 my_username_indoor = ''
 my_password_indoor = ''
+#   选择校园网运营商（填写： 移动  联通  电信 ）
+choose_yys = ''
 
 #   代码运行提示
 print('代码已经运行，请稍后!')
@@ -21,13 +22,10 @@ print('代码已经运行，请稍后!')
 #   登出
 def loginOut():
     url = "http://autewifi.net/loginOut"
-
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36'
     }
-
     response = requests.post(url, headers=headers)
-
     print(response.json()['msg'])
     driver.close()
 
@@ -87,13 +85,18 @@ def login_in():
                 print('登录成功!')
 
         if choose == 1:
-
+            if choose_yys == '移动':
+                yys = driver.find_element(By.XPATH, '//*[@id="yd"]')
+            elif choose_yys == '联通':
+                yys = driver.find_element(By.XPATH, '//*[@id="lt"]')
+            else:
+                yys = driver.find_element(By.XPATH, '//*[@id="yd"]')
             #   找到账号、密码以及运营商对应的html元素
             input_username = driver.find_element(By.XPATH,'//input[@id="userName"]')
             input_password = driver.find_element(By.XPATH,'//input[@id="passwd"]')
-            yys = driver.find_element(By.XPATH,'//*[@id="yd"]')
 
-            #   点击登录
+
+            #   运营商
             ActionChains(driver).click(yys).perform()
 
             #   输入账号、密码
@@ -112,7 +115,7 @@ def login_in():
                 error = result.text
 
                 #  创建弹窗对象
-                alert=driver.switch_to.alert
+                alert = driver.switch_to.alert
 
                 #点击弹窗中的【确定】
                 alert.accept()
@@ -138,3 +141,4 @@ if __name__ == '__main__':
 
     #   关闭浏览器
     driver.close()
+    sys.exit()
