@@ -1,3 +1,7 @@
+# 更新日志
+**代码已经停止更新**
+**请移步到最新版本**
+* [Htu_login](http://github.com/Dunmysad/Htu_login)
 # Htu_selenium_login
 ## 安装chromedriver
 
